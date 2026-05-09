@@ -7,11 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Inter', sans-serif;
@@ -28,11 +24,9 @@
         body::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(15, 23, 42, 0.85);
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.88);
             z-index: 1;
         }
         
@@ -44,10 +38,7 @@
             z-index: 2;
         }
         
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+        header { text-align: center; margin-bottom: 50px; }
         
         .title {
             font-size: 3.2rem;
@@ -56,19 +47,11 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 30px rgba(96, 165, 250, 0.5);
-            margin-bottom: 12px;
         }
         
-        .subtitle {
-            font-size: 1.3rem;
-            color: #94a3b8;
-            font-weight: 500;
-        }
+        .subtitle { font-size: 1.3rem; color: #94a3b8; font-weight: 500; }
         
-        .main-content {
-            display: flex;
-            gap: 40px;
-        }
+        .main-content { display: flex; gap: 40px; }
         
         .form-section {
             flex: 3;
@@ -86,21 +69,11 @@
             padding: 35px;
             height: fit-content;
             border: 1px solid rgba(148, 163, 184, 0.2);
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
         }
         
-        h2 {
-            color: #60a5fa;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #334155;
-            padding-bottom: 12px;
-        }
+        h2 { color: #60a5fa; margin-bottom: 25px; font-size: 1.8rem; border-bottom: 2px solid #334155; padding-bottom: 12px; }
         
-        .question {
-            margin-bottom: 32px;
-        }
-        
+        .question { margin-bottom: 32px; }
         .question-label {
             display: block;
             margin-bottom: 12px;
@@ -109,7 +82,7 @@
             font-size: 1.1rem;
         }
         
-        input[type="text"], input[type="number"], textarea {
+        input[type="text"], textarea {
             width: 100%;
             padding: 14px 18px;
             background: #1e2937;
@@ -117,7 +90,6 @@
             border-radius: 12px;
             color: #e2e8f0;
             font-size: 1rem;
-            transition: all 0.3s;
         }
         
         input[type="text"]:focus, textarea:focus {
@@ -126,16 +98,9 @@
             box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
         }
         
-        textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
+        textarea { min-height: 120px; resize: vertical; }
         
-        .yes-no-group {
-            display: flex;
-            gap: 20px;
-        }
-        
+        .yes-no-group { display: flex; gap: 20px; }
         .option {
             display: flex;
             align-items: center;
@@ -145,17 +110,9 @@
             border-radius: 12px;
             border: 1px solid #475569;
             cursor: pointer;
-            transition: all 0.3s;
             flex: 1;
         }
-        
-        .option:hover {
-            border-color: #60a5fa;
-        }
-        
-        .option input[type="radio"] {
-            accent-color: #60a5fa;
-        }
+        .option:hover { border-color: #60a5fa; }
         
         button {
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
@@ -166,38 +123,17 @@
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 20px;
             width: 100%;
+            margin-top: 20px;
         }
-        
         button:hover {
             transform: translateY(-3px);
             box-shadow: 0 20px 25px -5px rgb(96 165 250 / 0.3);
         }
         
-        .credits-title {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            color: #60a5fa;
-        }
-        
-        .credit-line {
-            margin-bottom: 12px;
-            color: #94a3b8;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #64748b;
-            font-size: 0.95rem;
-        }
-        
-        .logo {
-            font-size: 4rem;
-            margin-bottom: 10px;
-        }
+        .credits-title { font-size: 1.4rem; margin-bottom: 20px; color: #60a5fa; }
+        .footer { text-align: center; margin-top: 50px; color: #64748b; font-size: 0.95rem; }
+        .logo { font-size: 4rem; margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -209,119 +145,92 @@
         </header>
         
         <div class="main-content">
-            <!-- Form -->
             <div class="form-section">
                 <h2>Staff Application Form</h2>
-                
                 <form id="staffForm">
+                    <!-- All your questions remain the same -->
                     <div class="question">
                         <label class="question-label">1. What do you do if you see someone RDMing?</label>
                         <textarea name="rdm" placeholder="Explain your response..." required></textarea>
                     </div>
-                    
                     <div class="question">
                         <label class="question-label">2. What do you do if you see someone FRPing?</label>
                         <textarea name="frp" placeholder="Explain your response..." required></textarea>
                     </div>
-                    
                     <div class="question">
                         <label class="question-label">3. What do you do if you see a VDMer?</label>
                         <textarea name="vdm" placeholder="Explain your response..." required></textarea>
                     </div>
-                    
                     <div class="question">
                         <label class="question-label">4. If you see staff abusing their power, what do you do?</label>
                         <textarea name="staff_abuse" placeholder="Explain your response..." required></textarea>
                     </div>
-                    
                     <div class="question">
                         <label class="question-label">5. If you see a civilian talking in Discord chat (DC), what do you do?</label>
                         <textarea name="civ_dc" placeholder="Explain your response..." required></textarea>
                     </div>
-                    
                     <div class="question">
-                        <label class="question-label">6. If you are in RTO for police and you hear a shootout, then it goes to a staff scene and no one realizes — what is the first thing you do?</label>
+                        <label class="question-label">6. If you are in RTO for police and you hear a shootout, then it goes to a staff scene... what is the first thing you do?</label>
                         <textarea name="rto_shootout" placeholder="Explain your response..." required></textarea>
                     </div>
-                    
                     <div class="question">
                         <label class="question-label">7. If you see a guy stealing a staff car, what do you do and what can you do?</label>
                         <textarea name="staff_car" placeholder="Explain your response..." required></textarea>
                     </div>
-                    
+
                     <div class="question">
                         <label class="question-label">8. Do you understand you can be denied if this application is not sufficient?</label>
                         <div class="yes-no-group">
-                            <label class="option">
-                                <input type="radio" name="understand_denied" value="Yes" required> Yes
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="understand_denied" value="No"> No
-                            </label>
+                            <label class="option"><input type="radio" name="understand_denied" value="Yes" required> Yes</label>
+                            <label class="option"><input type="radio" name="understand_denied" value="No"> No</label>
                         </div>
                     </div>
-                    
+
                     <div class="question">
                         <label class="question-label">9. Are you 10+ or 10-?</label>
                         <div class="yes-no-group">
-                            <label class="option">
-                                <input type="radio" name="age" value="10+" required> 10+
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="age" value="10-"> 10-
-                            </label>
+                            <label class="option"><input type="radio" name="age" value="10+" required> 10+</label>
+                            <label class="option"><input type="radio" name="age" value="10-"> 10-</label>
                         </div>
                     </div>
-                    
+
                     <div class="question">
                         <label class="question-label">10. What is your Discord ID? (Example: 1323832494923055124)</label>
                         <input type="text" name="discord_id" placeholder="Your Discord ID" required>
                     </div>
-                    
+
                     <div class="question">
                         <label class="question-label">11. Do you understand we are strict for the sake of the roleplay?</label>
                         <div class="yes-no-group">
-                            <label class="option">
-                                <input type="radio" name="understand_strict" value="Yes" required> Yes
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="understand_strict" value="No"> No
-                            </label>
+                            <label class="option"><input type="radio" name="understand_strict" value="Yes" required> Yes</label>
+                            <label class="option"><input type="radio" name="understand_strict" value="No"> No</label>
                         </div>
                     </div>
-                    
+
                     <div class="question">
-                        <label class="question-label">12. Do you understand you have to clock in for staff? You can't just put on the uniform and say this is not a staff scene.</label>
+                        <label class="question-label">12. Do you understand you have to clock in for staff?</label>
                         <div class="yes-no-group">
-                            <label class="option">
-                                <input type="radio" name="understand_clockin" value="Yes" required> Yes
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="understand_clockin" value="No"> No
-                            </label>
+                            <label class="option"><input type="radio" name="understand_clockin" value="Yes" required> Yes</label>
+                            <label class="option"><input type="radio" name="understand_clockin" value="No"> No</label>
                         </div>
                     </div>
-                    
+
                     <button type="submit">Submit Application</button>
                 </form>
             </div>
-            
-            <!-- Credits Sidebar -->
+
             <div class="credits-sidebar">
                 <div class="credits-title">Credits</div>
                 <div class="credit-line"><strong>Coder / Co-Founder:</strong><br>AKA N. Williams</div>
                 <div class="credit-line"><strong>Made Questions:</strong><br>Hunter Brown</div>
                 <hr style="border-color: #334155; margin: 25px 0;">
                 <p style="color: #64748b; font-size: 0.95rem; line-height: 1.5;">
-                    Thank you for applying to Florida State Roleplay Staff Team.<br><br>
-                    We are looking for dedicated, mature, and knowledgeable individuals who will help maintain a high-quality roleplay environment.
+                    Thank you for applying to Florida State Roleplay Staff Team.
                 </p>
             </div>
         </div>
         
-        <div class="footer">
-            Florida State Roleplay © 2026 • All Rights Reserved
-        </div>
+        <div class="footer">Florida State Roleplay © 2026 • All Rights Reserved</div>
     </div>
 
     <script>
@@ -329,42 +238,66 @@
             e.preventDefault();
             
             const formData = new FormData(this);
-            let message = "**🛡️ New Staff Application Submitted**\n\n";
             
-            message += "**1. RDM Response:**\n" + (formData.get('rdm') || 'No answer') + "\n\n";
-            message += "**2. FRP Response:**\n" + (formData.get('frp') || 'No answer') + "\n\n";
-            message += "**3. VDM Response:**\n" + (formData.get('vdm') || 'No answer') + "\n\n";
-            message += "**4. Staff Abuse Response:**\n" + (formData.get('staff_abuse') || 'No answer') + "\n\n";
-            message += "**5. Civ in DC Response:**\n" + (formData.get('civ_dc') || 'No answer') + "\n\n";
-            message += "**6. RTO Shootout Response:**\n" + (formData.get('rto_shootout') || 'No answer') + "\n\n";
-            message += "**7. Staff Car Theft Response:**\n" + (formData.get('staff_car') || 'No answer') + "\n\n";
-            message += "**8. Can be denied:** " + (formData.get('understand_denied') || 'No answer') + "\n";
-            message += "**9. Age:** " + (formData.get('age') || 'No answer') + "\n";
-            message += "**10. Discord ID:** `" + (formData.get('discord_id') || 'No answer') + "`\n";
-            message += "**11. Understand strict RP:** " + (formData.get('understand_strict') || 'No answer') + "\n";
-            message += "**12. Understand clock in:** " + (formData.get('understand_clockin') || 'No answer') + "\n";
+            // Create nicely formatted text content
+            let content = "FLORIDA STATE ROLEPLAY - STAFF APPLICATION\n";
+            content += "===========================================\n\n";
+            content += `Submitted on: ${new Date().toLocaleString()}\n\n`;
             
+            content += "1. What do you do if you see someone RDMing?\n";
+            content += formData.get('rdm') + "\n\n";
+            
+            content += "2. What do you do if you see someone FRPing?\n";
+            content += formData.get('frp') + "\n\n";
+            
+            content += "3. What do you do if you see a VDMer?\n";
+            content += formData.get('vdm') + "\n\n";
+            
+            content += "4. Staff abusing power?\n";
+            content += formData.get('staff_abuse') + "\n\n";
+            
+            content += "5. Civilian talking in DC?\n";
+            content += formData.get('civ_dc') + "\n\n";
+            
+            content += "6. RTO Shootout → Staff Scene?\n";
+            content += formData.get('rto_shootout') + "\n\n";
+            
+            content += "7. Stealing Staff Car?\n";
+            content += formData.get('staff_car') + "\n\n";
+            
+            content += "8. Understand you can be denied? → " + formData.get('understand_denied') + "\n";
+            content += "9. Age Requirement? → " + formData.get('age') + "\n";
+            content += "10. Discord ID → " + formData.get('discord_id') + "\n";
+            content += "11. Understand we are strict? → " + formData.get('understand_strict') + "\n";
+            content += "12. Must clock in as staff? → " + formData.get('understand_clockin') + "\n";
+
+            // Create text file
+            const blob = new Blob([content], { type: 'text/plain' });
+            const file = new File([blob], `Staff_Application_${formData.get('discord_id') || 'Unknown'}.txt`, { type: 'text/plain' });
+
             const webhookUrl = "https://discord.com/api/webhooks/1501802039339122791/disrmmU9s3oBKycEIDilNRvwTWEEG3Ba7wronz-hB3c2BNOE7CsLiqLjTpzWBHC_kLF3";
-            
+
+            const payload = new FormData();
+            payload.append("payload_json", JSON.stringify({
+                content: "**🛡️ New Staff Application Received**",
+                username: "Staff Application Bot"
+            }));
+            payload.append("file", file);
+
             try {
                 const response = await fetch(webhookUrl, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        content: message,
-                        username: "Staff Application Bot",
-                        avatar_url: "https://i.imgur.com/removed.png"
-                    })
+                    body: payload
                 });
-                
+
                 if (response.ok) {
-                    alert("✅ Application submitted successfully! Thank you.");
+                    alert("✅ Application submitted successfully as .txt file!");
                     document.getElementById('staffForm').reset();
                 } else {
-                    alert("❌ Failed to submit. Please try again.");
+                    alert("❌ Failed to submit application.");
                 }
             } catch (error) {
-                alert("❌ Error submitting application. Please check your connection.");
+                alert("❌ Error submitting application. Check your connection.");
                 console.error(error);
             }
         });
